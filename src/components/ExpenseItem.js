@@ -1,5 +1,15 @@
+import "./ExpenseItem.css"
+
 function ExpenseItem() {
-  return <h2>Expense item is here</h2>
+  return (
+    <div className="expense-item">
+      <div>March 28th 2021</div>
+      <div className="expense-item__description">
+        <h2>Clothes for home wear</h2>
+        <div className="expense-item__price">£120</div>
+      </div>
+    </div>
+  );
 }
 
-export default ExpenseItem
+export default ExpenseItem;
