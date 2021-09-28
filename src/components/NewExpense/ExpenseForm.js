@@ -13,13 +13,22 @@ const ExpenseForm = () => {
   })
 
   const inputChangeHandler = (event) => {
-    setUserInput(
-      Object.assign(userInput, { [event.target.name]: event.target.value }),
-    )
+    setUserInput((prevState) => {
+      return { ...prevState, [event.target.name]: event.target.value }
+    })
+  }
+  const submitHandler = (event) => {
+    event.preventDefault()
+
+    const expenseData = {
+      title: userInput.title,
+      amount: userInput.amount,
+      date: new Date(userInput.date),
+    }
   }
 
   return (
-    <form>
+    <form onSubmit={submitHandler}>
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label>Title</label>
