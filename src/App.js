@@ -8,13 +8,13 @@ const INITIAL_EXPENSES = [
     id: 'el1',
     title: 'Cloth for home wear',
     amount: 120,
-    date: new Date(2021, 6, 24),
+    date: new Date(2020, 6, 24),
   },
   {
     id: 'el2',
     title: 'Pyjamas',
     amount: 60,
-    date: new Date(2021, 7, 24),
+    date: new Date(2020, 7, 24),
   },
   {
     id: 'el3',
